@@ -94,3 +94,8 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
+for filename in $@
+do
+basename --$@
+grep ">" $@ | wc -l
+done
