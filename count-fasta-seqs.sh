@@ -99,3 +99,11 @@ do
 basename --$@
 grep ">" $@ | wc -l
 done
+
+
+#CTracy comments: This isn't doing what was desired. If you run "sh run_tests.sh" while in the folder you will see the expected and observed output for the tests.
+# You will need to use echo to print the number of sequences in each file follwed by just the filename.
+# I would recommend creating a variable to hold just the filename and a variable for your grep value.
+# I would also recommend creating a variable for the sum outside of the for loop, and then within the for loop adding your grep value variable to that sum variable
+# Additionally, right now within the for loop it is calling the grep for all the files provided and not just the single filename that is being looped through
+# Try to fix these and see if you can get it to pass the tests when you run "sh run_tests.sh"
